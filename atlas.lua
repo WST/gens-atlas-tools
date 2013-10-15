@@ -16,12 +16,14 @@ local prev_y = 0
 local diff_x = viewport_width / 2 - 160
 local diff_y = viewport_height / 2 - 112
 local map = {}
-local path = string.gsub(debug.getinfo(1).short_src, '[\\/]gdtest.lua', '')
+local path = string.gsub(debug.getinfo(1).short_src, '[\\/]atlas.lua', '')
 
 -- Current viewport
 local viewport = gd.createTrueColor(viewport_width, viewport_height)
 
 -- TODO: ROM auto detection
+-- TODO: direct video rendering from the script (if possible?)
+-- TODO: custom HUD
 
 function loadMap(level)
 	local maps = {
